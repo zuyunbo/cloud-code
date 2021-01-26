@@ -14,7 +14,6 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper=false)
-@Builder
 public class CUser  {
 	private static final long serialVersionUID = 1L;
 
@@ -56,4 +55,7 @@ public class CUser  {
      * 账号
      */
      private String username;
+
+    public CUser() {
+    }
 }
