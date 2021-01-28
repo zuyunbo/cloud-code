@@ -2,7 +2,7 @@ package com.cloud.datacontrol.service.impl;
 
 
 import com.cloud.datacontrol.entity.CUser;
-import com.cloud.datacontrol.entity.CUserParam;
+import com.cloud.datacontrol.entity.parm.CUserParam;
 import com.cloud.datacontrol.mapper.CUserMapper;
 import com.cloud.datacontrol.service.CUserService;
 import com.github.pagehelper.PageHelper;

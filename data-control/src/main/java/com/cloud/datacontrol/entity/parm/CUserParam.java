@@ -1,4 +1,4 @@
-package com.cloud.datacontrol.entity;
+package com.cloud.datacontrol.entity.parm;
 
 import lombok.Data;
 

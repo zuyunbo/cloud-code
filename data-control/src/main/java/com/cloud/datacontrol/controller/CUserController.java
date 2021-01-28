@@ -3,7 +3,7 @@ package com.cloud.datacontrol.controller;
 
 import com.cloud.datacontrol.conf.SimpleBatchHandler;
 import com.cloud.datacontrol.entity.CUser;
-import com.cloud.datacontrol.entity.CUserParam;
+import com.cloud.datacontrol.entity.parm.CUserParam;
 import com.cloud.datacontrol.service.CUserService;
 import com.github.pagehelper.PageInfo;
 
@@ -28,7 +28,6 @@ public class CUserController {
 
     @GetMapping("page")
     public Object page(CUserParam queryParam) {
-        simpleBatchHandler.startHandle();
         PageInfo pageInfo = cUserService.pageQuery(queryParam);
         return pageInfo;
     }

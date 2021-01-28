@@ -16,7 +16,7 @@ public class SimpleBatchHandler {
     /**
      * 每次批量读取的数据量
      */
-    private int batch = 30;
+    private int batch = 5;
 
     /**
      * 开始处理

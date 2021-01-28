@@ -1,7 +1,7 @@
 package com.cloud.datacontrol.service;
 
 import com.cloud.datacontrol.entity.CUser;
-import com.cloud.datacontrol.entity.CUserParam;
+import com.cloud.datacontrol.entity.parm.CUserParam;
 
 /**
  * ${comments}

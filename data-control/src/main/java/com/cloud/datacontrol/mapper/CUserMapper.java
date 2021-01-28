@@ -5,7 +5,7 @@ package com.cloud.datacontrol.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cloud.datacontrol.entity.CUser;
-import com.cloud.datacontrol.entity.CUserParam;
+import com.cloud.datacontrol.entity.parm.CUserParam;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
