@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
 @Service
 public class SimpleBatchHandler {
 
-    private ExecutorService executorService = Executors.newFixedThreadPool(20);
+    private ExecutorService executorService = Executors.newFixedThreadPool(30);
 
     @Autowired
     private MockService service;
