@@ -50,6 +50,7 @@ public class ImportMysql {
         CUserCopy1 cUserCopy1 = new CUserCopy1();
         for (CUser cUser : users) {
             BeanUtils.copyProperties(cUser, cUserCopy1);
+            cUserCopy1.setId(null);
             cUserCopy1Mapper.insert(cUserCopy1);
         }
     }
