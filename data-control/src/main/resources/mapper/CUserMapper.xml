@@ -3,7 +3,7 @@
 
 <mapper namespace="com.cloud.datacontrol.mapper.CUserMapper">
 
-    <select id="listQuery" parameterType="com.cloud.datacontrol.entity.CUserParam" resultType="com.cloud.datacontrol.entity.CUser">
+    <select id="listQuery" parameterType="com.cloud.datacontrol.entity.parm.CUserParam" resultType="com.cloud.datacontrol.entity.CUser">
         SELECT * FROM c_user
     </select>
 
