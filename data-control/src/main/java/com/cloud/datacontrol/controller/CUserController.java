@@ -2,6 +2,8 @@ package com.cloud.datacontrol.controller;
 
 
 import com.cloud.datacontrol.conf.SimpleBatchHandler;
+import com.cloud.datacontrol.config.RabbtiConfig;
+import com.cloud.datacontrol.config.service.HelloSender;
 import com.cloud.datacontrol.entity.CUser;
 import com.cloud.datacontrol.entity.parm.CUserParam;
 import com.cloud.datacontrol.service.CUserService;
@@ -24,12 +26,20 @@ public class CUserController {
     private CUserService cUserService;
 
     @Autowired
+    private HelloSender helloSender;
+
+    @Autowired
     private SimpleBatchHandler simpleBatchHandler;
 
     @GetMapping("page")
     public Object page(CUserParam queryParam) {
+/*
         PageInfo pageInfo = cUserService.pageQuery(queryParam);
-        return pageInfo;
+*/
+        for (int i=0;i<100;i++){
+            helloSender.send(i);
+        }
+        return "ok";
     }
 
     @DeleteMapping(value = "/{id}")

@@ -22,7 +22,7 @@ public class MockService {
     /**
      * 可读取总数
      */
-    private long canReadTotal = 3000;
+    private long canReadTotal = 90;
 
     /**
      * 写入总数
