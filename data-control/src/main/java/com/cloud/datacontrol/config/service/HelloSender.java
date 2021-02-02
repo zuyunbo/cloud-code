@@ -16,7 +16,7 @@ public class HelloSender {
     public void send(int i) {
         String context = "hello " + new Date() + "    " + i;
         System.out.println("Sender : " + context +"    "+ i);
-        this.rabbitTemplate.convertAndSend("hello", context);
+        this.rabbitTemplate.convertAndSend("user", context);
     }
 
 }

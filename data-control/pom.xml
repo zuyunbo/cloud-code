@@ -7,7 +7,6 @@
         <groupId>com.cloud</groupId>
         <version>1.0</version>
     </parent>
-    <groupId>com.cloud</groupId>
     <artifactId>data-control</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>data-control</name>

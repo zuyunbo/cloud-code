@@ -4,6 +4,7 @@ import com.cloud.datacontrol.entity.CApplication;
 import com.cloud.datacontrol.entity.CUser;
 import com.cloud.datacontrol.mapper.CApplicationMapper;
 import com.cloud.datacontrol.mapper.CUserMapper;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,10 @@ import java.util.concurrent.atomic.AtomicLong;
 @Service
 public class MockService {
 
+
+
+    @Autowired
+    private AmqpTemplate rabbitTemplate;
 
     @Autowired
     CUserMapper cUserMapper;

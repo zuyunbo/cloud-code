@@ -2,15 +2,16 @@ package com.example.datacontrolclients.config;
 
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 
-@Component
+@Configuration
 public class HelloReceiver {
 
+
     @RabbitHandler
-    @RabbitListener(queues = "hello")
-    public void process(String hello) {
-        System.out.println("Receiver  1: " + hello);
+    @RabbitListener(queues = "queueName")
+    public void process(String str1) {
+        System.out.println(str1);
     }
 
 }

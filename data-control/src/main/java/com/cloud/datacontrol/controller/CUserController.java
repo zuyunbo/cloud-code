@@ -9,6 +9,7 @@ import com.cloud.datacontrol.entity.parm.CUserParam;
 import com.cloud.datacontrol.service.CUserService;
 import com.github.pagehelper.PageInfo;
 
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,14 +32,15 @@ public class CUserController {
     @Autowired
     private SimpleBatchHandler simpleBatchHandler;
 
+    @Autowired
+    private AmqpTemplate rabbitTemplate;
+
     @GetMapping("page")
     public Object page(CUserParam queryParam) {
 /*
         PageInfo pageInfo = cUserService.pageQuery(queryParam);
 */
-        for (int i=0;i<100;i++){
-            helloSender.send(i);
-        }
+        rabbitTemplate.convertAndSend("exchangeName", "routingKey", "hello,rabbit~");
         return "ok";
     }
 
