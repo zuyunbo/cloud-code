@@ -5,7 +5,7 @@ package com.example.datacontrolclients.mapper;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.datacontrolclients.entity.CUser;
+import com.cloud.datacontrol.entity.CUser;
 import com.example.datacontrolclients.entity.parm.CUserParam;
 import org.springframework.stereotype.Repository;
 

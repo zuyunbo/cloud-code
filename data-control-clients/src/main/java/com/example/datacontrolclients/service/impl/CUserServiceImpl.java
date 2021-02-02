@@ -2,7 +2,7 @@ package com.example.datacontrolclients.service.impl;
 
 
 
-import com.example.datacontrolclients.entity.CUser;
+import com.cloud.datacontrol.entity.CUser;
 import com.example.datacontrolclients.entity.parm.CUserParam;
 import com.example.datacontrolclients.mapper.CUserMapper;
 import com.example.datacontrolclients.service.CUserService;

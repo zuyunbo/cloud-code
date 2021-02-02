@@ -1,5 +1,6 @@
 package com.cloud.datacontrol.conf;
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -53,8 +54,9 @@ public class ImportMysql {
         CUserCopy1 cUserCopy1 = new CUserCopy1();
         for (CUser cUser : users) {
             BeanUtils.copyProperties(cUser, cUserCopy1);
-            cUserCopy1.setId(null);
-            this.rabbitTemplate.convertAndSend("user", cUser);
+            cUser.setId(null);
+            String userString = JSON.toJSONString(cUser);
+            this.rabbitTemplate.convertAndSend("exchangeName", "routingKey", userString);
         }
     }
 }
