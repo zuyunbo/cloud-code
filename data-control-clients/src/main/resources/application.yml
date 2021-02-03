@@ -20,6 +20,11 @@ spring:
     port: 5672
     username: guest
     password: guest
+  redis:
+    database: 12
+    host: redis1.aegis-info.com
+    port: 36380
+    password: ‘]’ZvW3y!hz8dsF[ow
 
 
 mybatis-plus:

@@ -35,5 +35,7 @@ mybatis-plus:
       logic-not-delete-value: 1
       # 删除后
       logic-delete-value: 0
-
-
+seata:
+  tx-service-group: my_test_tx_group
+  service:
+    grouplist: 47.105.35.98:8091
